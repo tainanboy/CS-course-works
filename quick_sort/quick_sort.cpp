@@ -7,9 +7,21 @@
 using namespace std;
 vector<int> data;
 
+void Fileoutput(string filename);
 void quick_sort(vector<int> &data,int left,int right);
 int partition(vector<int> &a,int left,int right);
 void SWAP(vector<int> &data,int i,int j);
+
+
+void Fileoutput(string filename)
+{
+    ofstream ff;
+    filename="E24016506_HW1_quickSort_"+filename;
+    ff.open(filename.c_str());
+    for(int i=0;i<data.size();i++)
+        ff<<data[i]<<endl;
+    ff.close();
+}
 
 
 void quick_sort(vector<int> &data,int left,int right)
@@ -60,5 +72,6 @@ int main(int argc, char const *argv[])
     for (int i=1;i<data.size();i++){
         cout<<data[i]<<endl;
     }
+    Fileoutput("file.txt");
     return 0;
 }

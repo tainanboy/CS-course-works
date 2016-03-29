@@ -17,6 +17,17 @@
 using namespace std;
 vector<double> data;
 
+
+void Fileoutput(string filename)
+{
+    ofstream ff;
+    filename="E24016506_HW1_InsertionSort_"+filename;
+    ff.open(filename.c_str());
+    for(int i=0;i<data.size();i++)
+        ff<<data[i]<<endl;
+    ff.close();
+}
+
 void insertion_sort(vector<double>& a, int length){
     for (int j=1;j<length;j++){
         int key = a[j];
@@ -46,4 +57,5 @@ int main(int argc, char const *argv[])
         cout<<data[i]<<endl;
     }
     return 0;
+    Fileoutput("file.txt");
 }
