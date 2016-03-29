@@ -4,10 +4,10 @@
 #include <string>
 #include <fstream>
 #include <vector>
+#include <time.h>
 using namespace std;
 vector<int> data;
 
-void Fileoutput(string filename);
 void quick_sort(vector<int> &data,int left,int right);
 int partition(vector<int> &a,int left,int right);
 void SWAP(vector<int> &data,int i,int j);
@@ -22,7 +22,6 @@ void Fileoutput(string filename)
         ff<<data[i]<<endl;
     ff.close();
 }
-
 
 void quick_sort(vector<int> &data,int left,int right)
 {
@@ -68,10 +67,14 @@ int main(int argc, char const *argv[])
             data.push_back(value);
         }
     }
+    double START, END;
+    START = clock();
     quick_sort(data, 1, data.size()-1);
+    END = clock();
     for (int i=1;i<data.size();i++){
         cout<<data[i]<<endl;
     }
     Fileoutput("file.txt");
+    cout<<"CPU Time"<<END-START<<endl;
     return 0;
 }

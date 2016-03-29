@@ -14,6 +14,7 @@
 #include <string>
 #include <fstream>
 #include <vector>
+#include<time.h>
 using namespace std;
 vector<double> data;
 
@@ -40,8 +41,6 @@ void insertion_sort(vector<double>& a, int length){
     }
 }
 
-
-
 int main(int argc, char const *argv[])
 {
     /* code */
@@ -52,10 +51,15 @@ int main(int argc, char const *argv[])
             data.push_back(value);
         }
     }
+    double START,END;
+    START = clock();
     insertion_sort(data, data.size());
+    END = clock();
     for (int i=1;i<data.size();i++){
         cout<<data[i]<<endl;
     }
-    return 0;
     Fileoutput("file.txt");
+    cout<<"CPU Time"<<END-START<<endl;
+    return 0;
 }
+
