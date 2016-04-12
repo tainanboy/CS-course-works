@@ -37,33 +37,25 @@ public:
     }
     
 
-    // An iterative process to print preorder traversal of Binary tree
+    // iterative preorder 
     void iterativePreorder(tree_node *root)
     {
         if (root == NULL)
             return;
         
-        // Create an empty stack and push root to it
-        stack<tree_node *> nodeStack;
-        nodeStack.push(root);
+        stack<tree_node *> s;
+        s.push(root);
         
-        /* Pop all items one by one. Do following for every popped item
-         a) print it
-         b) push its right child
-         c) push its left child
-         Note that right child is pushed first so that left is processed first */
-        while (nodeStack.empty() == false)
+        while (s.empty() == false)
         {
-            // Pop the top item from stack and print it
-            struct tree_node *node = nodeStack.top();
+            struct tree_node *node = s.top();
             printf ("%d ", node->data);
-            nodeStack.pop();
+            s.pop();
             
-            // Push right and left children of the popped node to stack
             if (node->right)
-                nodeStack.push(node->right);
+                s.push(node->right);
             if (node->left)
-                nodeStack.push(node->left);
+                s.push(node->left);
         }
     }
     
