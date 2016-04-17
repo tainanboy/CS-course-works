@@ -1,1 +1,1 @@
-# Answers to common questions in NCKUEE programming class. C++ implementation.
+# Common programming exercises in NCKUEE classes.
