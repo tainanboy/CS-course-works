@@ -1,1 +1,1 @@
-# Common programming exercises in NCKUEE classes.
+# programming exercises in NCKUEE classes, including introduction to programmin, data structures, algorithms, operating systems and so on.
