@@ -16,7 +16,7 @@ int main(int argc, const char * argv[]) {
     //h1.Union(&h2);
     //cerr<<"size of h1 is: "<<h1.getsize()<<endl;
     cerr<<"minimum value in h1 is: "<<h1.minimum()<<endl;
-    q = h1.extract_min();
+    //q = h1.extract_min();
     //cout<<"minimum value in h1 is: "<<q->key<<endl;
     p = h1.extract_min();
     //cout<<"minimum value in h1 is: "<<p->key<<endl;
