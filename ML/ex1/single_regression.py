@@ -54,4 +54,3 @@ plt.show()
 # Predict profit for a city with population of 35000 and 70000
 print(ftheta.T.dot([1, 3.5])*10000)
 print(ftheta.T.dot([1, 7])*10000)
-
