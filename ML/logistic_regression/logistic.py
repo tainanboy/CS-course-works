@@ -17,6 +17,7 @@ def plotData(X,y):
     plt.plot(neg[:,1],neg[:,2],'yo',label='Not admitted')
     plt.xlabel('Exam 1 score')
     plt.ylabel('Exam 2 score')
+    plt.legend()
     plt.grid(True)
     #plt.show()
     
